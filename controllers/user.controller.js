@@ -55,14 +55,10 @@ module.exports = {
             message: "Email or password wrong",
           });
         }
-
-        res.json({
-          message: "Sign up success",
-          user,
-        });
       })
       .catch((err) => {
         res.json({
+          code: 500,
           message: "Opps! Something went wrong",
         });
       });
